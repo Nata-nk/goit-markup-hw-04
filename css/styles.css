@@ -148,6 +148,10 @@ img {
   padding: 24px 0;
 }
 
+.menu-color {
+  color: #404bbf;
+}
+
 .header-address-item {
   flex: shrink 0;
   min-width: 151px;
