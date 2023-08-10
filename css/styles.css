@@ -124,20 +124,6 @@ img {
 .logo-nav {
   color: #f4f4fd;
 }
-.studio {
-  position: relative;
-}
-
-.studio::after {
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 2px;
-}
 
 .header-menu-link {
   color: var(--navyblue, #2e2f42);
@@ -148,8 +134,20 @@ img {
   padding: 24px 0;
 }
 
-.menu-color {
+.studio {
+  position: relative;
   color: #404bbf;
+}
+
+.studio::after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
 }
 
 .header-address-item {
@@ -516,11 +514,12 @@ img {
 
 .portfolio-nav {
   position: relative;
+  color: #404bbf;
 }
 
 .portfolio-nav::after {
   position: absolute;
-  bottom: -25px;
+  bottom: -3px;
   left: 0;
   content: "";
   width: 100%;
