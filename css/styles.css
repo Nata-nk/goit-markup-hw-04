@@ -447,6 +447,10 @@ img {
   padding: 100px 0;
 }
 
+.footer-logo-box {
+  margin-right: 120px;
+}
+
 .logofooter {
   display: flex;
   padding-bottom: 0px;
@@ -460,17 +464,15 @@ img {
 .footer-box {
   display: flex;
   align-items: baseline;
-  padding-bottom: 0px;
-  gap: 120px;
 }
 
 .footer-social-text {
   color: var(--white, #fff);
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
-  min-height: 24px;
+  margin-bottom: 16px;
 }
 
 .footer-sosial-list {
@@ -489,16 +491,16 @@ img {
   align-items: center;
   border-radius: 50%;
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-box {
   display: flex;
   flex-direction: column;
-  padding-bottom: 0px;
-  gap: 16px;
 }
 
-.footer-sosial-link:hover {
+.footer-sosial-link:hover,
+.footer-sosial-link:focus {
   background-color: #31d0aa;
 }
 
@@ -653,9 +655,10 @@ img {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(46, 47, 66, 0.4);
+  background-color: rgba(46, 47, 66, 0.4);
   top: 0;
-  transition: opasiti 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
@@ -663,10 +666,12 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   border-radius: 4px;
   background: var(--color-dairy);
-  transition: transform 250ms linear;
+  box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backgrop.is-hidden .modal {
@@ -674,7 +679,9 @@ img {
 }
 
 .modal-close-btn {
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 24px;
   right: 24px;
   width: 24px;
@@ -682,7 +689,17 @@ img {
   background-color: #e7e9fc;
   border-radius: 50%;
   stroke-width: 1px;
-  border: #e7e9fc, rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
 }
 
 .is-hidden {
@@ -693,4 +710,10 @@ img {
 
 .modal-close-icon {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: #ffffff;
 }
