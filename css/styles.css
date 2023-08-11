@@ -418,16 +418,22 @@ img {
   align-items: center;
   border-radius: 4px;
   border: 1px solid var(--color-light-slate);
+  color: #8e8f99;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-sosial-icon {
+  fill: currentColor;
   fill: var(--color-light-slate);
 }
 .customers-link:hover .customers-sosial-icon {
   fill: var(--color-ocean);
 }
-.customers-link:hover {
+.customers-link:hover,
+.customers-link:focus {
   border: 1px solid var(--color-ocean);
+  color: #404bbf;
 }
 
 /* ----------------FOOTER------------------- */
@@ -453,12 +459,12 @@ img {
 }
 .footer-box {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   padding-bottom: 0px;
   gap: 120px;
 }
 
-.footer-social-title {
+.footer-social-text {
   color: var(--white, #fff);
   font-size: 16px;
   font-weight: 500;
