@@ -425,7 +425,6 @@ img {
 
 .customers-sosial-icon {
   fill: currentColor;
-  fill: var(--color-light-slate);
 }
 .customers-link:hover .customers-sosial-icon {
   fill: var(--color-ocean);
